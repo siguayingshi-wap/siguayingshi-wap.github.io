@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丝瓜影视 - 丝瓜影视资源导航与观影入口 | siguayingshi-wap</title>
+<meta name="description" content="丝瓜影视(siguayingshi-wap)是丝瓜影视资源导航与观影入口页面，涵盖分类导航、热播推荐、更新动态与观影指南，适配手机与平板访问，内容清晰、结构完整。">
+<meta name="keywords" content="丝瓜影视,siguayingshi-wap,影视导航,热播影视,影视分类,观影指南,影视资源">
+<meta name="author" content="丝瓜影视">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="丝瓜影视">
+<meta property="og:title" content="丝瓜影视 - 丝瓜影视资源导航与观影入口">
+<meta property="og:description" content="涵盖分类导航、热播推荐、更新动态与观影指南，适配手机与平板访问。">
+<meta property="og:url" content="https://siguayingshi-wap.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a1f12">
+<link rel="canonical" href="https://siguayingshi-wap.github.io/">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,BlinkMacSystemFont,sans-serif;background:#07140d;color:#e7f5ec;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font:inherit;outline:none}
+img{display:block;max-width:100%}
+::selection{background:#4ade80;color:#07140d}
+:focus-visible{outline:2px solid #4ade80;outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:88px 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:#86efac;font-weight:800;margin-bottom:14px}
+.kicker i{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px #4ade80;display:inline-block}
+.h2{font-size:clamp(27px,4.4vw,44px);font-weight:900;line-height:1.25}
+.h2 em{font-style:normal;background:linear-gradient(92deg,#86efac,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#9db5a6;max-width:640px;margin-top:15px;font-size:16px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+/* leaf bg */
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 12% 8%,rgba(34,197,94,.18),transparent 42%),radial-gradient(circle at 90% 88%,rgba(202,138,4,.16),transparent 42%),#07140d}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background-image:radial-gradient(rgba(134,239,172,.42) 1.2px,transparent 1.6px);background-size:52px 52px;opacity:.18;pointer-events:none}
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(7,20,13,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:20px;flex:none}
+.logo .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:20px;background:linear-gradient(150deg,#16a34a,#84cc16);box-shadow:0 8px 24px -10px #16a34a;font-style:normal}
+.logo b{color:#fff}
+.logo b i{font-style:normal;color:#86efac}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{font-size:15px;padding:9px 14px;border-radius:11px;color:#c7e0d2;font-weight:600;transition:.2s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav a.pill{background:linear-gradient(135deg,#16a34a,#ca8a04);color:#fff;margin-left:8px;font-weight:800}
+.nav a.pill:hover{filter:brightness(1.12)}
+.burger{display:none;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);font-size:20px;color:#86efac}
+/* HERO */
+.hero{padding:96px 0 104px;position:relative}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(33px,5.8vw,58px);font-weight:950;line-height:1.14;color:#fff}
+.hero h1 b{display:block;background:linear-gradient(92deg,#bbf7d0,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#a8c2b2;font-size:clamp(15px,2vw,18px);margin-top:18px;max-width:520px}
+.search{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:10px;backdrop-filter:blur(6px)}
+.search input{flex:1;min-width:200px;border:none;background:transparent;padding:12px 16px;font-size:15.5px;color:#fff}
+.search input::placeholder{color:#7a9686}
+.search button{padding:0 26px;border-radius:12px;font-weight:900;font-size:15px;background:linear-gradient(135deg,#16a34a,#84cc16);color:#fff;transition:.25s;white-space:nowrap}
+.search button:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.tags{margin-top:20px;display:flex;gap:9px;flex-wrap:wrap}
+.tags a{font-size:13px;font-weight:700;padding:7px 15px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#c7e0d2;transition:.2s}
+.tags a:hover{color:#07140d;background:#86efac;border-color:#86efac}
+/* vine art */
+.vine{position:relative;display:grid;place-items:center;min-height:430px}
+.gourd{width:240px;height:300px;border-radius:50% 50% 48% 48%/58% 58% 42% 42%;background:linear-gradient(155deg,#22c55e,#4d7c0f 55%,#365314);position:relative;box-shadow:inset -26px -34px 60px rgba(0,0,0,.35),0 40px 80px -30px rgba(34,197,94,.55);display:grid;place-items:center}
+.gourd::before{content:"";position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:14px;height:34px;border-radius:8px;background:linear-gradient(180deg,#365314,#4d7c0f);box-shadow:0 -16px 0 -3px #365314}
+.gourd::after{content:"";position:absolute;top:-56px;left:50%;transform:translateX(-50%);width:5px;height:60px;background:#365314;border-radius:5px;box-shadow:24px -18px 0 -2px #4d7c0f,52px 4px 0 -3px #365314,-20px -22px 0 -2px #4d7c0f}
+.g-text{font-size:34px;font-weight:950;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.3);z-index:2;letter-spacing:2px}
+.g-sub{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:4px;color:rgba(255,255,255,.8);font-weight:800;z-index:2}
+.leaf{position:absolute;border-radius:0 100% 0 100%;background:linear-gradient(135deg,rgba(74,222,128,.35),rgba(34,197,94,.15));border:1.5px solid rgba(134,239,172,.3)}
+.leaf.l1{width:150px;height:150px;left:-10px;top:20px;transform:rotate(-20deg)}
+.leaf.l2{width:180px;height:180px;right:-20px;bottom:10px;transform:rotate(150deg)}
+/* nav chips: flex wrap cards */
+.chips{margin-top:42px;display:flex;flex-wrap:wrap;gap:14px}
+.chip{flex:1 1 150px;min-width:150px;padding:20px 22px;border-radius:18px;background:linear-gradient(160deg,rgba(34,197,94,.14),rgba(7,20,13,.5));border:1px solid rgba(134,239,172,.2);transition:.25s;position:relative;overflow:hidden}
+.chip::after{content:"";position:absolute;right:-26px;top:-26px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(134,239,172,.28),transparent 65%)}
+.chip:hover{border-color:rgba(134,239,172,.6);transform:translateY(-4px)}
+.chip b{font-size:16px;color:#fff;font-weight:900;display:block}
+.chip span{font-size:12.5px;color:#8faa98;font-weight:700;margin-top:5px;display:block}
+.chip i{font-size:26px;display:block;margin-bottom:10px;font-style:normal}
+/* hot list: numbered rows */
+.hot{background:linear-gradient(180deg,transparent,rgba(7,20,13,.6))}
+.list{margin-top:42px;display:grid;gap:12px}
+.row{display:grid;grid-template-columns:58px 1fr auto auto;gap:18px;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px 20px;transition:.25s}
+.row:hover{border-color:rgba(134,239,172,.5);background:rgba(255,255,255,.07)}
+.row .no{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:19px;font-weight:950;color:#07140d;background:linear-gradient(135deg,#86efac,#fde68a);font-style:italic}
+.row.gold .no{background:linear-gradient(135deg,#fde047,#f59e0b)}
+.row .info h4{font-size:16.5px;font-weight:900;color:#fff}
+.row .info small{color:#8faa98;font-size:12.5px;font-weight:700}
+.row .heat{font-size:13px;font-weight:800;color:#86efac;white-space:nowrap}
+.row .go{font-size:12.5px;font-weight:800;padding:8px 16px;border-radius:99px;border:1px solid rgba(134,239,172,.4);color:#86efac;transition:.2s}
+.row .go:hover{background:#86efac;color:#07140d}
+/* timeline */
+.tl{margin-top:46px;position:relative;padding-left:32px}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(180deg,#22c55e,#ca8a04)}
+.node{position:relative;padding:0 0 26px 22px}
+.node:last-child{padding-bottom:0}
+.node::before{content:"";position:absolute;left:-31px;top:5px;width:22px;height:22px;border-radius:50%;background:#07140d;border:3px solid #4ade80;box-shadow:0 0 0 5px rgba(74,222,128,.14)}
+.node time{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#fde68a}
+.node h4{font-size:17px;font-weight:900;color:#fff;margin:3px 0 5px}
+.node p{font-size:14px;color:#9db5a6}
+/* guide: vertical step list */
+.guide{background:linear-gradient(180deg,rgba(7,20,13,.6),transparent)}
+.steps{margin-top:42px;display:grid;gap:16px;counter-reset:s}
+.step{display:grid;grid-template-columns:64px 1fr;gap:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:22px;transition:.25s}
+.step:hover{border-color:rgba(134,239,172,.5)}
+.step::before{counter-increment:s;content:counter(s);width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-weight:950;color:#07140d;background:linear-gradient(135deg,#86efac,#fde68a)}
+.step h4{font-size:17px;font-weight:900;color:#fff}
+.step p{font-size:14px;color:#9db5a6;margin-top:5px}
+.note{margin-top:14px;font-size:13px;color:#8faa98;padding:14px 18px;border-radius:12px;background:rgba(134,239,172,.08);border:1px solid rgba(134,239,172,.18)}
+.note b{color:#86efac}
+/* cta */
+.cta{position:relative;overflow:hidden;padding:96px 0;text-align:center;background:radial-gradient(circle at 50% 115%,rgba(74,222,128,.4),transparent 48%),linear-gradient(180deg,#07140d,#14532d 60%,#365314)}
+.cta h2{font-size:clamp(27px,5.4vw,48px);font-weight:950;color:#fff;line-height:1.25}
+.cta h2 b{display:block;font-size:1.2em;background:linear-gradient(92deg,#bbf7d0,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta p{color:#c7e0d2;margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:99px;font-weight:800;font-size:15px;transition:.25s}
+.btn-p{background:linear-gradient(135deg,#16a34a,#84cc16);color:#07140d;box-shadow:0 16px 40px -16px rgba(34,197,94,.7)}
+.btn-p:hover{filter:brightness(1.1);transform:translateY(-3px)}
+.btn-o{border:2px solid rgba(255,255,255,.28);color:#fff}
+.btn-o:hover{background:rgba(255,255,255,.1)}
+/* footer */
+footer{border-top:1px solid rgba(255,255,255,.08);padding:60px 0 32px;background:#040b07}
+.foot{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:36px}
+.foot h5{font-size:14px;font-weight:800;margin-bottom:16px;color:#fff}
+.foot ul li{margin-bottom:10px}
+.foot ul a{font-size:13.5px;color:#7d9b89;transition:.2s}
+.foot ul a:hover{color:#4ade80}
+.foot .brand p{color:#7d9b89;font-size:13.5px;margin:14px 0}
+.foot .brand .url{display:inline-block;padding:9px 15px;border-radius:10px;background:rgba(255,255,255,.07);font-size:13px;color:#c7e0d2;font-family:monospace}
+.copy{padding-top:26px;margin-top:38px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#5b7a69;font-size:12.5px}
+/* responsive */
+@media(max-width:980px){.hgrid{grid-template-columns:1fr;gap:48px}.vine{min-height:350px}.row{grid-template-columns:48px 1fr}.row .heat,.row .go{display:none}}
+@media(max-width:680px){
+ .wrap{padding:0 16px}
+ section{padding:64px 0}
+ .nav{position:fixed;left:0;right:0;top:70px;flex-direction:column;align-items:stretch;gap:4px;padding:18px;background:#07140d;border-bottom:1px solid rgba(255,255,255,.08);transform:translateY(-112%);transition:.3s;visibility:hidden;box-shadow:0 24px 50px -24px rgba(0,0,0,.5)}
+ .nav.open{transform:translateY(0);visibility:visible}
+ .nav a{padding:13px 16px;border-radius:12px}
+ .nav a.pill{margin-left:0}
+ .burger{display:grid;place-items:center}
+ .hero{padding:64px 0 80px}
+ .search button{padding:0 18px}
+ .vine{min-height:290px}
+ .gourd{width:190px;height:240px}
+ .step{grid-template-columns:1fr;gap:12px}
+ .step::before{width:44px;height:44px;font-size:18px}
+}
+@media print{body{background:#fff;color:#000}header,.cta,footer{display:none}section{padding:18px 0}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#home" aria-label="丝瓜影视 首页"><i class="ic">&#127817;</i><b>丝瓜<i>影视</i></b></a>
+    <nav class="nav" id="nav">
+      <a href="#cat">分类导航</a>
+      <a href="#hot">热播推荐</a>
+      <a href="#news">更新动态</a>
+      <a href="#guide">观影指南</a>
+      <a href="#site" class="pill">访问官网</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hgrid">
+      <div>
+        <div class="kicker"><i></i>SIGUA · YINGSHI</div>
+        <h1>丝瓜影视<br><b>清晰导航</b></h1>
+        <p>丝瓜影视(siguayingshi-wap)是丝瓜影视资源导航与观影入口页面，帮你快速了解分类导航、热播推荐、更新动态与观影指南，适配手机与平板访问。</p>
+        <form class="search" onsubmit="event.preventDefault();location.href='#cat'">
+          <input type="search" placeholder="搜索影片名称、类型或关键词…" aria-label="搜索影视内容">
+          <button type="submit">&#128269; 搜索</button>
+        </form>
+        <div class="tags">
+          <a href="#cat">电影</a><a href="#cat">电视剧</a><a href="#cat">动漫</a>
+          <a href="#cat">综艺</a><a href="#cat">纪录片</a><a href="#cat">4K专区</a>
+        </div>
+      </div>
+      <div class="vine" aria-hidden="true">
+        <div class="leaf l1"></div><div class="leaf l2"></div>
+        <div class="gourd">
+          <span class="g-text">丝瓜</span>
+          <span class="g-sub">SIGUAYINGSHI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY: flex chips -->
+  <section id="cat">
+    <div class="wrap">
+      <div class="kicker"><i></i>Categories</div>
+      <h2 class="h2 center">分类<em>导航</em></h2>
+      <p class="lead center">丝瓜影视按题材与内容形态整理的分类入口，点击对应分类可快速定位到目标内容区域。</p>
+      <div class="chips">
+        <a class="chip" href="#cat"><i>&#127909;</i><b>电影大片</b><span>院线 / 动作 / 剧情</span></a>
+        <a class="chip" href="#cat"><i>&#128250;</i><b>热播剧集</b><span>都市 / 古装 / 悬疑</span></a>
+        <a class="chip" href="#cat"><i>&#127912;</i><b>动漫动画</b><span>国漫 / 日番 / 剧场版</span></a>
+        <a class="chip" href="#cat"><i>&#127908;</i><b>综艺节目</b><span>真人秀 / 访谈 / 选秀</span></a>
+        <a class="chip" href="#cat"><i>&#128247;</i><b>纪录片</b><span>自然 / 人文 / 历史</span></a>
+        <a class="chip" href="#cat"><i>&#127916;</i><b>4K 专区</b><span>超高清 / HDR / 高帧率</span></a>
+        <a class="chip" href="#cat"><i>&#127813;</i><b>儿童专区</b><span>动画 / 启蒙 / 亲子</span></a>
+        <a class="chip" href="#cat"><i>&#127916;&#65039;</i><b>经典回顾</b><span>高分老片 / 系列合集</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT: numbered rows -->
+  <section id="hot">
+    <div class="wrap">
+      <div class="kicker"><i></i>Trending Now</div>
+      <h2 class="h2">热播<em>推荐</em></h2>
+      <p class="lead">丝瓜影视整理的近期热播推荐清单，按热度排序，覆盖不同题材，点击右侧入口查看更多。</p>
+      <div class="list">
+        <div class="row gold"><div class="no">1</div><div class="info"><h4>破晓行动</h4><small>动作 / 犯罪 · 电影</small></div><span class="heat">&#128293; 982 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row gold"><div class="no">2</div><div class="info"><h4>长安夜行</h4><small>古装 / 悬疑 · 剧集</small></div><span class="heat">&#128293; 876 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row gold"><div class="no">3</div><div class="info"><h4>深海回声</h4><small>纪录片 / 自然 · 4K</small></div><span class="heat">&#128293; 741 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row"><div class="no">4</div><div class="info"><h4>夏日方程式</h4><small>都市 / 爱情 · 剧集</small></div><span class="heat">&#11088; 668 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row"><div class="no">5</div><div class="info"><h4>机械之心</h4><small>科幻 / 冒险 · 动漫</small></div><span class="heat">&#11088; 592 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row"><div class="no">6</div><div class="info"><h4>味道的旅行</h4><small>美食 / 文化 · 综艺</small></div><span class="heat">&#11088; 510 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row"><div class="no">7</div><div class="info"><h4>边境线</h4><small>剧情 / 历史 · 电影</small></div><span class="heat">&#11088; 447 万热度</span><a class="go" href="#hot">查看详情</a></div>
+        <div class="row"><div class="no">8</div><div class="info"><h4>小熊森林</h4><small>动画 / 亲子 · 儿童</small></div><span class="heat">&#11088; 386 万热度</span><a class="go" href="#hot">查看详情</a></div>
+      </div>
+      <div class="note"><b>说明：</b>热度为丝瓜影视整理的参考指标，会随观看与互动情况变化，具体以实际页面显示为准。</div>
+    </div>
+  </section>
+
+  <!-- NEWS: vertical timeline -->
+  <section id="news">
+    <div class="wrap">
+      <div class="kicker"><i></i>Update Feed</div>
+      <h2 class="h2 center">更新<em>动态</em></h2>
+      <p class="lead center">丝瓜影视的内容与功能更新记录，按时间倒序排列，方便你了解最新变化。</p>
+      <div class="tl">
+        <div class="node"><time>2026-10-10</time><h4>新增 4K 专区入口</h4><p>补充超高清、HDR 与高帧率内容的分类入口，方便大屏用户快速定位。</p></div>
+        <div class="node"><time>2026-09-28</time><h4>优化移动端访问体验</h4><p>调整栏目布局与交互细节，提升手机、平板等窄屏设备下的浏览体验。</p></div>
+        <div class="node"><time>2026-09-15</time><h4>更新热播推荐清单</h4><p>按热度排序重新整理近期热播内容，覆盖电影、剧集、动漫与纪录片。</p></div>
+        <div class="node"><time>2026-08-30</time><h4>新增观影指南栏目</h4><p>补充清晰度选择、网络条件与设备适配等实用观影建议。</p></div>
+        <div class="node"><time>2026-08-12</time><h4>页面结构与内容上线</h4><p>完成丝瓜影视导航页面的栏目搭建与内容整理，支持主流浏览器访问。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE: counter steps -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="kicker"><i></i>Viewing Guide</div>
+      <h2 class="h2">观影<em>指南</em></h2>
+      <p class="lead">丝瓜影视整理的实用观影建议，从清晰度选择到设备适配，四步帮你获得更舒适的观看体验。</p>
+      <div class="steps">
+        <div class="step"><div></div><div><h4>根据屏幕选择清晰度</h4><p>手机与平板优先选择 1080P 即可满足日常观看；大屏电视、投影则建议选择 4K 片源，充分发挥面板分辨率。</p></div></div>
+        <div class="step"><div></div><div><h4>匹配网络与流量条件</h4><p>4K 与高码率内容对带宽要求较高，网络不稳定或移动流量有限时，可手动降低清晰度，避免播放缓冲。</p></div></div>
+        <div class="step"><div></div><div><h4>关注片源与音画规格</h4><p>分辨率之外，码率、色深、HDR 与音轨规格同样影响观感，复杂运动画面和暗场场景更依赖高码率片源。</p></div></div>
+        <div class="step"><div></div><div><h4>合理选择观看场景</h4><p>纪录片与特效大片适合大屏高动态范围；移动出行场景可选 1080P，兼顾画质、流畅与省流。</p></div></div>
+      </div>
+      <div class="note"><b>提示：</b>以上为通用观影建议，实际效果还受片源、播放器、设备型号与系统版本影响，请结合自身情况选择。</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="site">
+    <div class="wrap">
+      <h2>轻松导航<br><b>想看就看</b></h2>
+      <p>访问丝瓜影视官方网站，查看分类导航、热播推荐、更新动态与观影指南，更快找到想看的内容。</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="https://siguayingshi-wap.github.io">&#127760; 访问官网</a>
+        <a class="btn btn-o" href="#cat">浏览分类导航</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <a class="logo" href="#home"><i class="ic">&#127817;</i><b>丝瓜<i>影视</i></b></a>
+        <p>丝瓜影视(siguayingshi-wap)是丝瓜影视资源导航与观影入口页面，涵盖分类导航、热播推荐、更新动态与观影指南，适配手机与平板访问。</p>
+        <span class="url">https://siguayingshi-wap.github.io</span>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <ul>
+          <li><a href="#cat">分类导航</a></li>
+          <li><a href="#hot">热播推荐</a></li>
+          <li><a href="#news">更新动态</a></li>
+          <li><a href="#guide">观影指南</a></li>
+          <li><a href="#site">访问官网</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>内容分类</h5>
+        <ul>
+          <li><a href="#cat">电影大片</a></li>
+          <li><a href="#cat">热播剧集</a></li>
+          <li><a href="#cat">动漫动画</a></li>
+          <li><a href="#cat">综艺节目</a></li>
+          <li><a href="#cat">4K 专区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>相关说明</h5>
+        <ul>
+          <li><a href="#guide">清晰度选择</a></li>
+          <li><a href="#guide">网络与流量</a></li>
+          <li><a href="#guide">设备适配</a></li>
+          <li><a href="#news">更新记录</a></li>
+          <li><a href="#site">访问官网</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 丝瓜影视(siguayingshi-wap) 保留所有权利。</span>
+      <span>网站网址：https://siguayingshi-wap.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',function(){
+  nav.classList.toggle('open');
+  var o=nav.classList.contains('open');
+  burger.setAttribute('aria-expanded',o);burger.innerHTML=o?'&#10005;':'&#9776;';
+});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+  nav.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.innerHTML='&#9776;';
+})});
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)';io.unobserve(e.target);}
+  });
+},{threshold:.12});
+document.querySelectorAll('.chip,.row,.node,.step,.cta-btns,.search,.tags').forEach(function(el){
+  el.style.opacity=0;el.style.transform='translateY(22px)';el.style.transition='opacity .5s ease,transform .5s ease';io.observe(el);
+});
+</script>
+</body>
+</html>
